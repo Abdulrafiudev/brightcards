@@ -35,9 +35,9 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl md:text-7xl font-heading font-bold text-neutral-text mb-6 leading-tight tracking-tight">
-            Fun Animal <br />
+            Bright Cards <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-neutral-text to-neutral-muted">
-              Quiz for Kids.
+              An Interactive Learning Experience for Kids.
             </span>
           </h1>
 
