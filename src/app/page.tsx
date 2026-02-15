@@ -30,11 +30,11 @@ export default function Home() {
         >
           <div className="flex items-center gap-2 mb-6">
             <span className="px-3 py-1 rounded-full bg-accent-purple/10 text-accent-purple text-xs font-mono tracking-widest uppercase border border-accent-purple/20">
-              Animal Game
+              Ama's Bright Cards
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-neutral-text mb-6 leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-7xl font-heading font-bold text-neutral-text mb-6 leading-tight tracking-tight">
             Fun Animal <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-neutral-text to-neutral-muted">
               Quiz for Kids.
