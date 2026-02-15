@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-inter), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  /* Minimal Dark Theme Palette */
+  --color-primary-light: #2a2a2a;
+  --color-primary: #1a1a1a; /* Secondary Section / Card Bg */
+  --color-primary-dark: #000000;
+
+  --color-secondary-light: #a3a3a3;
+  --color-secondary: #737373;
+  --color-secondary-dark: #404040;
+
+  /* Accents */
+  --color-accent-purple: #9f7aea; /* Muted Purple */
+  --color-accent-red: #e53e3e; /* Muted Red */
+
+  --color-neutral-background: #111111; /* Deep charcoal / near-black */
+  --color-neutral-card: #1a1a1a; /* Slightly lighter charcoal */
+  --color-neutral-text: #f5f5f5; /* Soft white */
+  --color-neutral-muted: #aaaaaa; /* Light gray */
+
+  /* Minimal Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom Utilities */
+@utility card-hover {
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+    background-color: #252525;
+  }
+}
+
+@utility btn-clean {
+  transition: all 0.2s ease;
+  &:hover {
+    filter: brightness(110%);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}

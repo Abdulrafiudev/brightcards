@@ -1,0 +1,411 @@
+✅ Product Requirements Document (PRD)
+
+🎨 Branding Direction
+
+🔤 Font System
+
+🧱 Tech Stack Recommendation
+
+🧠 UX Strategy Notes (so you can defend your decisions in the walkthrough)
+
+📘 PRODUCT REQUIREMENTS DOCUMENT (PRD)
+1. Product Overview
+
+Working Title: BrightCards
+Type: Child-Friendly Animated Flashcard Learning Experience
+Target Age: 4–8 years
+Platform: Web (responsive, tablet-optimized)
+
+Goal
+
+Design a polished interactive flashcard experience that:
+
+Teaches a simple topic (e.g., Animals, Alphabets, Colors, Shapes)
+
+Allows learning → testing
+
+Tracks performance
+
+Ends with a celebratory moment
+
+Feels safe, intentional, and premium
+
+2. Core Experience Flow
+🟢 Phase 1: Welcome Screen
+
+Friendly mascot illustration
+
+Large “Start Learning” button
+
+Simple topic selector (optional: Animals only to reduce scope)
+
+Soft background animation
+
+🟡 Phase 2: Learning Mode (Flashcards)
+
+Structure:
+
+Card front: Image or prompt
+
+Tap/Click → Animated flip
+
+Card back: Name or explanation
+
+Interactions:
+
+Flip animation (smooth 3D rotation)
+
+Swipe or Next/Previous buttons
+
+Gentle sound feedback (optional but premium)
+
+Progress indicator (e.g., 2 of 6)
+
+Visual Rules:
+
+Large rounded cards
+
+Generous spacing
+
+No clutter
+
+Soft shadows
+
+🔵 Phase 3: Quiz Mode
+
+After learning:
+
+One question per screen
+
+Recognition style (multiple choice with 3 options)
+
+Tap to select answer
+
+Feedback Logic:
+
+Correct:
+
+Green glow
+
+Subtle bounce animation
+
+Positive phrase (“Great job!”)
+
+Incorrect:
+
+Gentle red highlight
+
+Show correct answer
+
+Encouraging message (“Let’s try the next one!”)
+
+System tracks:
+
+{
+  totalQuestions,
+  correctAnswers,
+  wrongAnswers
+}
+
+🟣 Phase 4: Results Dashboard
+
+Minimal dashboard showing:
+
+⭐ Final Score (e.g., 4/5)
+
+Progress bar
+
+Performance badge:
+
+🌟 Star Explorer (80%+)
+
+🐣 Learning Buddy (<80%)
+
+Celebration Moment
+
+Confetti animation
+
+Friendly congratulatory message
+
+Replay button
+
+🎯 Functional Requirements
+Flashcards
+
+Flip animation
+
+Keyboard + click support
+
+Responsive layout
+
+Maintain state between learning and quiz
+
+Quiz
+
+Randomize questions
+
+Prevent double answering
+
+Move to next only after interaction
+
+Scoring
+
+Accurate tracking
+
+Displayed only at end
+
+Reset functionality
+
+✨ UX PRINCIPLES (Critical for Evaluation)
+
+You will be judged heavily on this.
+
+1. Child Sensitivity
+
+Large tap targets
+
+No tiny buttons
+
+Friendly tone
+
+No harsh red error colors
+
+Rounded UI everywhere
+
+2. Visual Hierarchy
+
+Card > Question > Options > Controls
+
+Clear spacing
+
+Avoid text crowding
+
+3. Cognitive Simplicity
+
+One task per screen
+
+Minimal instructions
+
+Clear transitions
+
+4. Emotional Design
+
+Children must feel:
+
+Safe
+
+Encouraged
+
+Successful
+
+Even when wrong.
+
+🎨 BRANDING DIRECTION
+
+Since Chidinma is Creative Director, the experience must feel designed — not template-based.
+
+Brand Personality
+
+Warm
+
+Encouraging
+
+Playful but refined
+
+Clean, not chaotic
+
+Not loud cartoon chaos. Think premium early-learning app.
+
+Color System
+Primary
+
+Soft Sky Blue → #5EC6F3
+
+Warm Sunshine Yellow → #FFD65A
+
+Secondary
+
+Mint Green → #A8E6CF
+
+Soft Coral → #FF8C82
+
+Lavender → #C8B6FF
+
+Neutral
+
+Background: #F7FAFC
+
+Card Surface: #FFFFFF
+
+Text: #2D3748
+
+Avoid pure black.
+
+UI Style
+
+Rounded corners (16px–24px)
+
+Soft drop shadows
+
+Floating card effect
+
+Gradient backgrounds (subtle)
+
+Micro-interactions
+
+🔤 FONT SYSTEM
+
+Typography matters heavily for child products.
+
+Headings
+
+Baloo 2
+
+Friendly
+
+Rounded
+
+Highly readable
+
+Feels playful but clean
+
+Alternative:
+Fredoka
+
+Body Text
+
+Nunito
+
+Soft geometry
+
+Excellent readability
+
+Pairs beautifully with rounded headings
+
+Font Scale
+
+H1 – 40px
+H2 – 28px
+Body – 18px
+Buttons – 20px bold
+
+Large. Airy. Breathable.
+
+🧱 TECH STACK RECOMMENDATION
+
+You want polish and animation quality.
+
+Given your expertise (Next.js, SSR, structure), this is your strongest play:
+
+Frontend
+Framework
+
+Next.js (App Router)
+Why?
+
+Structured architecture
+
+Clean state handling
+
+Easy deployment
+
+Professional presentation
+
+Styling
+
+Tailwind CSS
+
+Fast iteration
+
+Clean spacing system
+
+Perfect for polished UI
+
+Animation
+
+Framer Motion
+
+Smooth flip animations
+
+Micro-interactions
+
+Celebration animations
+
+Professional feel
+
+For confetti:
+
+canvas-based micro animation (lightweight)
+
+State Management
+
+You can keep it simple:
+
+React useState + context
+
+No need for global store.
+
+Deployment
+
+Vercel
+
+Instant Next.js optimization
+
+Clean live URL
+
+Reliable for testing
+
+🏗 Suggested Folder Structure
+app/
+  page.tsx
+  quiz/
+    page.tsx
+  results/
+    page.tsx
+
+components/
+  Flashcard.tsx
+  QuizCard.tsx
+  ScoreBadge.tsx
+  Confetti.tsx
+  ProgressBar.tsx
+
+data/
+  flashcards.ts
+
+lib/
+  helpers.ts
+
+
+Clean. Structured. Intentional.
+
+🎥 Animation Strategy
+Flashcard Flip
+
+perspective container
+
+rotateY 180deg
+
+spring transition
+
+Slight bounce
+
+Correct Answer
+
+Scale up 1.05
+
+Glow shadow
+
+Checkmark fade-in
+
+Wrong Answer
+
+Subtle shake animation
+
+Gentle red border (not harsh)
+
+Celebration
+
+Confetti burst
+
+Floating stars
