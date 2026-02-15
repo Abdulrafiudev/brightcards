@@ -41,7 +41,6 @@ export default function StatsPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center py-20 bg-neutral-card rounded-2xl border border-neutral-muted/20"
           >
-            <div className="text-4xl mb-4">📊</div>
             <h2 className="text-xl font-body text-neutral-text mb-2">
               No stats yet!
             </h2>
