@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Confetti } from "@/components/Confetti";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { playSound } from "@/utils/audio";
 import React from "react";
 
 export default function ResultsPage() {
@@ -19,6 +20,11 @@ export default function ResultsPage() {
     if (addToHistory) {
       addToHistory(score, totalCards);
     }
+
+    // Play result sound
+    const isSuccess = Math.round((score / totalCards) * 100) >= 80;
+    playSound(isSuccess ? "success" : "keep-trying");
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Run once on mount
 

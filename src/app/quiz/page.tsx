@@ -8,6 +8,7 @@ import { QuizOption } from "@/components/QuizOption";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
+import { playSound } from "@/utils/audio";
 
 function simpleShuffle<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
@@ -64,6 +65,8 @@ export default function QuizPage() {
     setIsCorrect(correct);
     setIsSubmitted(true);
     submitAnswer(currentQuestion.id, correct);
+
+    playSound(correct ? "correct" : "incorrect");
 
     // Auto advance or wait for user?
     // Let's wait for user to click "Next" to read feedback.
